@@ -4,7 +4,7 @@ pragma solidity ^0.8.17;
 contract Bank {
     mapping(address => uint256) public balanceOf;
 
-    // steady lads, depositing more capital
+    // Deploying more capital, steady lads
     function deposit() public payable {
         balanceOf[msg.sender] += msg.value;
     }
