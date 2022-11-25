@@ -8,7 +8,8 @@ contract BankDeployScript is Script {
     function setUp() public {}
 
     function run() public {
-        vm.broadcast();
-        new Bank();
+        vm.startBroadcast();
+        Bank bank = new Bank();
+        bank.deposit{value: 1 ether}();
     }
 }
